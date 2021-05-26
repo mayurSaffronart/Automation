@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-05-25T14:25:34 IST" name="Suite" finished-at="2021-05-25T14:26:02 IST" duration-ms="28169">
+    <groups>
+    </groups>
+    <test started-at="2021-05-25T14:25:34 IST" name="Test" finished-at="2021-05-25T14:26:02 IST" duration-ms="28169">
+      <class name="storyLTD.LoginLogout">
+        <test-method signature="Login()[pri:0, instance:storyLTD.LoginLogout@7a560583]" started-at="2021-05-25T14:25:34 IST" name="Login" finished-at="2021-05-25T14:25:49 IST" duration-ms="14926" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method is-config="true" signature="close()[pri:0, instance:storyLTD.LoginLogout@7a560583]" started-at="2021-05-25T14:26:00 IST" name="close" finished-at="2021-05-25T14:26:01 IST" duration-ms="1110" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- storyLTD.LoginLogout -->
+      <class name="storyLTD.WindowHandles">
+        <test-method signature="WindowHandle()[pri:0, instance:storyLTD.WindowHandles@6941827a]" started-at="2021-05-25T14:25:49 IST" name="WindowHandle" finished-at="2021-05-25T14:26:00 IST" duration-ms="11210" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- WindowHandle -->
+        <test-method is-config="true" signature="close()[pri:0, instance:storyLTD.WindowHandles@6941827a]" started-at="2021-05-25T14:26:01 IST" name="close" finished-at="2021-05-25T14:26:02 IST" duration-ms="810" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- storyLTD.WindowHandles -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
