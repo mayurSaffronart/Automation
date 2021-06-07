@@ -7,9 +7,9 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
-import resources.base;
+import resources.Base;
 
-public class WindowHandles extends base {
+public class WindowHandles extends Base {
 	WebDriver driver = initializeDriver();
 
 	@Test

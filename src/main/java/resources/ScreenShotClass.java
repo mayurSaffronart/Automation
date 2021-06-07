@@ -8,13 +8,14 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
-public class screenShotClass {
+public class ScreenShotClass {
+	WebDriver driver;
 	
-	public void screenShot(WebDriver driver, String path) throws IOException
+	public void takeScreenShot(WebDriver driver, String methodName) throws IOException
 	{
+		this.driver=driver;
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		String path1=path;
-		FileUtils.copyFile(src, new File(path1 + "\\MAutomation\\src\\main\\java\\screenShots\\screeshot.png"));
+		String path = System.getProperty("user.dir");
+		FileUtils.copyFile(src, new File(path + "\\src\\main\\java\\screenShots\\"+methodName+".png"));	
 	}
-
 }

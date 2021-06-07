@@ -35,7 +35,7 @@ public class lotSize {
 		
 		System.out.println("Lot Size : " + count);
 
-		js.executeScript("alert('Lot Size : " + count + "')");
+		//js.executeScript("alert('Lot Size : " + count + "')");
 
 	}
 }

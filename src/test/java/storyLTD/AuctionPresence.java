@@ -5,24 +5,20 @@ import org.testng.AssertJUnit;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
-import resources.base;
+import resources.Base;
 import resources.lotSize;
-import resources.screenShotClass;
+import resources.ScreenShotClass;
 import storyLTD.pageObjects.HomePage;
 
-import java.io.File;
 import java.io.IOException;
-//import org.testng.AssertJUnit;
 import java.util.List;
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class AuctionPresence extends base {
+public class AuctionPresence extends Base {
 	WebDriver driver = initializeDriver();
+	ScreenShotClass sc = new ScreenShotClass();
 
 	@Test
 	public void Login() throws IOException, InterruptedException {
@@ -30,7 +26,7 @@ public class AuctionPresence extends base {
 		driver.findElement(By.cssSelector("a.cb-enable")).click();
 		
 		HomePage home = new HomePage(driver);
-		home.clickAuctionLink();
+		home.clickHomePageAuctionLink();
 	
 
 		String auctionPage = driver.findElement(By.xpath("//h2[@class='text-uppercase']")).getText();
@@ -62,10 +58,10 @@ public class AuctionPresence extends base {
 			driver.findElement(By.cssSelector("input#footer_subscribe_submit")).click();
 			System.out.println(driver.findElement(By.cssSelector("div.form-group p b")).getText());
 		}
-
-//		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-//		FileUtils.copyFile(src, new File(path + "\\MAutomation\\src\\main\\java\\screenShots\\screeshot.png"));
-		new screenShotClass();
+		
+	
+		String name = new Object(){}.getClass().getEnclosingMethod().getName();
+		sc.takeScreenShot(driver,name);
 	}
 
 	public boolean auctionCheck() {
