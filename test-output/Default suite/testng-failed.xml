@@ -5,7 +5,7 @@
     <classes>
       <class name="storyLTD.Login">
         <methods>
-          <include name="loginWithCredentials"/>
+          <include name="loginWithoutCredentials"/>
         </methods>
       </class> <!-- storyLTD.Login -->
     </classes>

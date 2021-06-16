@@ -1,1 +1,4 @@
 resources\Base.class
+resources\lotSize.class
+storyLTD\pageObjects\HomePage.class
+resources\ScreenShotClass.class

@@ -33,6 +33,7 @@ public class lotSize {
 
 		int count = listOfLots.size();
 		
+		
 		System.out.println("Lot Size : " + count);
 
 		//js.executeScript("alert('Lot Size : " + count + "')");

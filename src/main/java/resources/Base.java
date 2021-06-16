@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import storyLTD.pageObjects.HomePage;
 
 public class Base {
@@ -13,7 +14,9 @@ public class Base {
 
 	public WebDriver initializeDriver() {
 
-		System.setProperty("webdriver.chrome.driver", path + "/src/main/java/resources/chromedriver.exe");
+//		System.setProperty("webdriver.chrome.driver", path + "/src/main/java/resources/chromedriver.exe");
+		
+		WebDriverManager.chromedriver().setup();
 
 		ChromeOptions options = new ChromeOptions();
 

@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <listeners>
+    <listener class-name="storyLTD.StoryListeners"/>
+  </listeners>
   <test thread-count="5" name="Test(failed)" verbose="0">
     <classes>
-      <class name="storyLTD.LoginLogout">
+      <class name="storyLTD.AuctionPresence">
         <methods>
-          <include name="Login"/>
           <include name="close"/>
+          <include name="Login"/>
         </methods>
-      </class> <!-- storyLTD.LoginLogout -->
+      </class> <!-- storyLTD.AuctionPresence -->
+      <class name="storyLTD.Login">
+        <methods>
+          <include name="loginWithoutCredentials"/>
+        </methods>
+      </class> <!-- storyLTD.Login -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
