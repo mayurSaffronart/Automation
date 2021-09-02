@@ -5,8 +5,8 @@ import org.testng.AssertJUnit;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
-import resources.Base;
 import resources.lotSize;
+import resources.Base;
 import resources.ScreenShotClass;
 import storyLTD.pageObjects.HomePage;
 
@@ -15,6 +15,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 public class AuctionPresence extends Base {
 	WebDriver driver = initializeDriver();
@@ -59,7 +60,6 @@ public class AuctionPresence extends Base {
 			System.out.println(driver.findElement(By.cssSelector("div.form-group p b")).getText());
 		}
 		
-	
 		String name = new Object(){}.getClass().getEnclosingMethod().getName();
 		sc.takeScreenShot(driver,name);
 	}

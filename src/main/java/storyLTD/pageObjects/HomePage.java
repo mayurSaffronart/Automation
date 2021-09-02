@@ -42,6 +42,9 @@ public class HomePage {
 	@FindBy(css = "#ucnavigationnew_subscribe_button")
 	WebElement subscribeSignUp;
 
+	@FindBy(id = "ucnavigationnew_LoginView2_LoginStatus1")
+	WebElement logoutLink;
+
 	public void enterLoginId(String id) {
 		loginId.sendKeys(id);
 	}
@@ -54,8 +57,8 @@ public class HomePage {
 		signIn.click();
 	}
 
-	public String getLoginId() {
-		return loggedinId.getText();
+	public WebElement loggedinId() {
+		return loggedinId;
 	}
 
 	public WebElement subscriberPopUpEnterText() {
@@ -84,6 +87,10 @@ public class HomePage {
 
 	public void clickHomePagePopUpClose() {
 		driver.findElement(homePagePopUpClose).click();
+	}
+
+	public void logOut() {
+		logoutLink.click();
 	}
 
 }

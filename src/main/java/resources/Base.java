@@ -2,6 +2,8 @@ package resources;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -11,6 +13,7 @@ import storyLTD.pageObjects.HomePage;
 
 public class Base {
 	protected String path = System.getProperty("user.dir");
+	WebDriver driver;
 
 	public WebDriver initializeDriver() {
 
@@ -22,7 +25,7 @@ public class Base {
 
 		options.addArguments("headless");
 
-		WebDriver driver = new ChromeDriver();
+		driver = new ChromeDriver();
 
 		driver.manage().window().maximize();
 
@@ -34,6 +37,7 @@ public class Base {
 		HomePage home = new HomePage(driver);
 		home.clickHomePagePopUpClose();
 
+				
 		return driver;
 	}
 }

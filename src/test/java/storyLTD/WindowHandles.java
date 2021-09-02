@@ -13,9 +13,10 @@ public class WindowHandles extends Base {
 	WebDriver driver = initializeDriver();
 
 	@Test
-	public void WindowHandle() {
+	 void WindowHandle() {
 
 		driver.findElement(By.xpath("//img[@title='Pinterest']")).click();
+		
 
 		Set<String> windows = driver.getWindowHandles();
 

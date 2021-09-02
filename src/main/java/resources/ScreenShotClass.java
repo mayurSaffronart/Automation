@@ -16,6 +16,8 @@ public class ScreenShotClass {
 		this.driver=driver;
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		String path = System.getProperty("user.dir");
-		FileUtils.copyFile(src, new File(path + "\\src\\main\\java\\screenShots\\"+methodName+".png"));	
+		FileUtils.copyFile(src, new File(path + "\\src\\main\\java\\screenShots\\"+methodName+".png"));
+		
 	}
+	
 }
